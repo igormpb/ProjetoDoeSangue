@@ -106,7 +106,9 @@ section.donors{
 }
 .donor p {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+    padding: 3px 10px;
+    
 }
 main h2 {
     margin-bottom: 40px;
@@ -138,6 +140,7 @@ header button{
 section.form{
     transition: all 400ms;
 }
+
 section.form.hide {
     opacity: 0;
     visibility: hidden;
