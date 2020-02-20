@@ -1,0 +1,56 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe sangue</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css" />
+   
+   
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo" class='logo'>
+        <p>Doar sangue é doar vida</p>
+        <p>apenas 1,9% da população brasileira, doa sangue.</p>
+        <p>Seja o herói de alguém</p>
+        <button>Quero ajudar</button>
+        
+    </header>
+    <section class="form hide">
+        <h2>Seja um doador agora!</h2>
+        <form action="/" method="POST">
+        <input type="text" name="name" placeholder="Nome" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="text" name="blood" placeholder="Tipo sanguíneo"  onkeyup="maiuscula(this)" required>
+        <input type="submit" id="btn"value="Quero ajudar">
+        </form>
+    </section>
+<main>
+    <h2>Últimos <span>doadores</span></h2>
+    <section class="donors">
+        {% for donor in users %}
+        <div class="donor">
+            <div class="blood">{{donor.blood}}</div>
+            <p>{{donor.name}}</p>
+        </div>
+        {%endfor%}
+        
+    </section>
+</main>
+    <footer>
+        Desenvolvido na MaratonaDev
+    </footer>
+    <script src="/js/script.js"></script>
+    <script type="text/javascript">
+        // INICIO FUNÇÃO DE MASCARA MAIUSCULA
+        function maiuscula(z){
+                v = z.value.toUpperCase();
+                z.value = v;
+            }
+        //FIM DA FUNÇÃO MASCARA MAIUSCULA
+        </script>
+</body>
+
+</html>
